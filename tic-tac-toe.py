@@ -9,8 +9,10 @@ def print_board():
     print(row3)
     print()
 def player_move(icon):
+    
     if icon=="X":
         number=1
+
     elif icon=="O":
         number=2
     print("Your turn payer{}".format(number))
