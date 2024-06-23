@@ -16,6 +16,7 @@ def astarAlgo(start_node, stop_node):
                 
         if n==stop_node or graph_nodes[n]==None:
             pass
+        
         else:
             for(m,weight) in get_neighbours(n):
                 if m not in open_set and m not in closed_set:
@@ -69,11 +70,15 @@ def heuristic(n):
         'J':0
     }
     return H_dist[n]
+
+
+
 graph_nodes={
         'A':[('B',6),('F',3)],
         'B':[('C',3),('D',2)],
         'C':[('D',6),('E',5)],
         'D':[('C',6),('E',8)],
+
         'E':[('I',6),('J',5)],
         'F':[('G',6),('H',7)],
         'G':[('I',3)],

@@ -4,6 +4,8 @@ def print_board():
     row2="|{}|{}|{}|".format(board[3],board[4],board[5])
     row3="|{}|{}|{}|".format(board[6],board[7],board[8])
     print()
+
+
     print(row1)
     print(row2)
     print(row3)
@@ -14,6 +16,9 @@ def player_move(icon):
         number=1
 
     elif icon=="O":
+
+
+
         number=2
     print("Your turn payer{}".format(number))
     choice=int(input("enter the move(1-9):").strip())
@@ -35,6 +40,7 @@ def is_victory(icon):
     else:
         return False
 def is_drawn():
+    
     if " " not in board:
         return True
     else:
