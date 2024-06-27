@@ -25,14 +25,17 @@ def lowess(x, y, f, iterations):
 
     return yest
 
-import math
-n = 100
-x = np.linspace(0, 2 * math.pi, n)
-y = np.sin(x) + 0.3 * np.random.randn(n)
-f =0.25
-iterations=3
-yest = lowess(x, y, f, iterations)
+    return yest
+def main():
+    import math
+    n = 100
+    x = np.linspace(0, 2 * math.pi, n)
+    y = np.sin(x) + 0.3 * np.random.randn(n)
+    f =0.25
+    iterations=3
+    yest = lowess(x, y, f, iterations)
 
-import matplotlib.pyplot as plt
-plt.plot(x,y,"r.")
-plt.plot(x,yest,"b-")
+    import matplotlib.pyplot as plt
+    plt.plot(x,y,"r.")
+    plt.plot(x,yest,"b-")
+main()
